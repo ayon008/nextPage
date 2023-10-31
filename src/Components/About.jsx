@@ -3,17 +3,18 @@ import React from "react";
 const About = () => {
   return (
     <div className="max-w-[90%] mx-auto">
-      <div className="text-center w-1/2 mx-auto my-16">
-        <h2 className="text-4xl font-bold">
-          A reader lives a thousand lives before he dies
+      <div className="md:text-center text-left md:w-1/2 w-full mx-auto my-16">
+        <h2 className="md:text-4xl text-3xl font-bold">
+          A reader lives a <br className="hidden md:block" /> thousand lives
+          before he dies
         </h2>
-        <p className="text-lg mt-5 text-center">
+        <p className="md:text-lg text-base mt-5 md:text-center">
           Books are a uniquely portable magic. Books serve to show a man that
           those original thoughts of his aren’t very new after all. The man who
           does not read good books is no better than the man who can’t.
         </p>
       </div>
-      <div className="flex text-left items-center gap-10">
+      <div className="flex md:flex-row flex-col text-left items-center gap-10">
         <div>
           <div>
             <h3 className="text-xl font-bold">
