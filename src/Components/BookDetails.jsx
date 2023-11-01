@@ -8,9 +8,9 @@ const BookDetails = () => {
   const [fold, setFold] = useState(true);
 
   return (
-    <div className="h-screen max-w-[80%] mx-auto">
-      <div className="h-full flex items-center justify-center w-3/4 mx-auto">
-        <div className="flex justify-center gap-10 w-full border p-4">
+    <div className="md:h-screen">
+      <div className="h-full md:mt-0 mt-10 flex items-center justify-center md:w-3/4 w-[90%] mx-auto">
+        <div className="flex md:flex-row flex-col justify-center items-center md:items-start gap-10 w-full border p-4">
           <div className="">
             <img src={data.image} className="object-cover" alt="" />
           </div>
@@ -44,13 +44,18 @@ const BookDetails = () => {
               <p>
                 {data.desc}
                 <span>
-                  <button onClick={() => setFold(!fold)} className="text-blue-500">Read less</button>
+                  <button
+                    onClick={() => setFold(!fold)}
+                    className="text-blue-500"
+                  >
+                    Read less
+                  </button>
                 </span>
               </p>
             )}
             <div className="mt-5">
               <Button className="bg-sky-400 text-white me-5">Buy Now</Button>
-              <button>Learn More</button>
+              <button className="font-bold">Price: {data.price}</button>
             </div>
           </div>
         </div>
