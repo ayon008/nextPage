@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col md:flex-row items-center mx-auto max-w-[95%] justify-between gap-16 mt-10">
+    <div className="flex flex-col md:flex-row items-center mx-auto max-w-[95%] justify-between gap-16 mt-16">
       <div className="md:w-1/2 w-full">
         <small className="bg-yellow-400 px-3 font-semibold rounded-md">
           ON SALE!
