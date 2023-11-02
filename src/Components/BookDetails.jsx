@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "react-daisyui";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const BookDetails = () => {
   const data = useLoaderData();
   console.log(data);
   const [fold, setFold] = useState(true);
-
   return (
     <div className="md:h-screen">
       <div className="h-full md:mt-0 mt-10 flex items-center justify-center md:w-3/4 w-[90%] mx-auto">
@@ -54,7 +53,9 @@ const BookDetails = () => {
               </p>
             )}
             <div className="mt-5">
-              <Button className="bg-sky-400 text-white me-5">Buy Now</Button>
+              <Button className="bg-sky-400 text-white me-5">
+                <a href={data.url}>Buy Now</a>
+              </Button>
               <button className="font-bold">Price: {data.price}</button>
             </div>
           </div>
